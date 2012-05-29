@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-1.7.10.1\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2012-05-21 08:57+0800\n"
-"PO-Revision-Date: 2012-05-28 15:28+0700\n"
+"PO-Revision-Date: 2012-05-29 08:44+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -677,7 +677,7 @@ msgstr "Không có dòng ngược được cấu hình cho nhánh '%s'"
 #: sha1_name.c:872
 #, c-format
 msgid "Upstream branch '%s' not stored as a remote-tracking branch"
-msgstr ""
+msgstr "Nhánh ngược dòng (upstream) '%s' không được lưu lại như là một nhánh 'remote-tracking'"
 
 #: wt-status.c:135
 msgid "Unmerged paths:"
@@ -720,7 +720,7 @@ msgstr "  (sử dụng \"git checkout -- <tập_tin>...\" để loại bỏ nh�
 
 #: wt-status.c:179
 msgid "  (commit or discard the untracked or modified content in submodules)"
-msgstr ""
+msgstr "  (chuyển giao (commit) hoặc là loại bỏ các nội dung không-bị-theo-vết hay đã bị chỉnh sửa trong mô-đun-con)"
 
 #: wt-status.c:188
 #, c-format
@@ -866,7 +866,7 @@ msgstr " (sử dụng \"git add\" và/hoặc \"git commit -a\")"
 #: wt-status.c:789
 #, c-format
 msgid "nothing added to commit but untracked files present%s\n"
-msgstr ""
+msgstr "không có gì được thêm vào lần chuyển giao (commit) nhưng có những tập tin không được theo dấu vết hiện diện%s\n"
 
 #: wt-status.c:791
 msgid " (use \"git add\" to track)"
@@ -1162,7 +1162,7 @@ msgstr[0] ""
 #: builtin/apply.c:2775
 #, c-format
 msgid "Context reduced to (%ld/%ld) to apply fragment at %d"
-msgstr ""
+msgstr "Nội dung được giảm xuống (%ld/%ld) để áp dụng mảnh dữ liệu tại %d"
 
 #: builtin/apply.c:2781
 #, c-format
@@ -1284,7 +1284,7 @@ msgstr "miếng vá sai hỏng cho dự án con (subproject) %s"
 #: builtin/apply.c:3514
 #, c-format
 msgid "unable to stat newly created file '%s'"
-msgstr "không thể lấy trạng thái về tập tin %s mới được tạo"
+msgstr "không thể lấy trạng thái về tập tin %s mới hơn đã được tạo"
 
 #: builtin/apply.c:3519
 #, c-format
@@ -1405,7 +1405,7 @@ msgstr ""
 
 #: builtin/apply.c:3992
 msgid "paths are separated with NUL character"
-msgstr ""
+msgstr "các đường dẫn bị ngăn cách bởi ký tự NULL"
 
 #: builtin/apply.c:3995
 msgid "ensure at least <n> lines of context match"
@@ -1417,12 +1417,12 @@ msgstr "hành động"
 
 #: builtin/apply.c:3997
 msgid "detect new or modified lines that have whitespace errors"
-msgstr ""
+msgstr "tìm thấy một dòng mới hoặc bị sửa đổi mà nó có lỗi do khoảng trắng"
 
 #: builtin/apply.c:4000
 #: builtin/apply.c:4003
 msgid "ignore changes in whitespace when finding context"
-msgstr ""
+msgstr "lờ đi sự thay đổi do khoảng trắng khi quét nội dung"
 
 #: builtin/apply.c:4006
 msgid "apply the patch in reverse"
@@ -1450,7 +1450,7 @@ msgstr ""
 
 #: builtin/apply.c:4018
 msgid "do not trust the line counts in the hunk headers"
-msgstr ""
+msgstr "không tin số lượng dòng trong phần đầu khối dữ liệu"
 
 #: builtin/apply.c:4020
 msgid "root"
@@ -1537,6 +1537,8 @@ msgid ""
 "not deleting branch '%s' that is not yet merged to\n"
 "         '%s', even though it is merged to HEAD."
 msgstr ""
+"không xóa nhánh '%s' cái mà chưa được hòa trộng vào\n"
+"         '%s', cho dù là nó đã được hòa trộn vào HEAD."
 
 #: builtin/branch.c:180
 msgid "cannot use -a with -d"
@@ -2105,7 +2107,7 @@ msgstr "Không biết làm cách nào để nhân bản (clone) %s"
 #: builtin/clone.c:835
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
-msgstr ""
+msgstr "Nhánh máy chủ %s không tìm thấy trong dòng ngược (upstream) %s"
 
 #: builtin/clone.c:842
 msgid "You appear to have cloned an empty repository."
@@ -2128,6 +2130,16 @@ msgid ""
 "\n"
 "    git commit --amend --reset-author\n"
 msgstr ""
+"Tên và địa chỉ thư điện tử của bạn được cấu hình một cách tự động trên cơ sở\n"
+"tài khoản và địa chỉ máy chủ của bạn. Xin hãy kiểm tra xem chúng có chính xác không.\n"
+"Bạn có thể chặn những thông báo kiểu này bằng cách cài đặt các thông tin trên một cách rõ ràng:\n"
+"\n"
+"    git config --global user.name \"Tên của bạn\"\n"
+"    git config --global user.email you@example.com\n"
+"\n"
+"Sau khi thực hiện xong, bạn có thể sửa chữa định danh được sử dụng cho lần chuyển giao (commit) này với lệnh:\n"
+"\n"
+"    git commit --amend --reset-author\n"
 
 #: builtin/commit.c:55
 msgid ""
@@ -2148,7 +2160,7 @@ msgstr ""
 
 #: builtin/commit.c:253
 msgid "failed to unpack HEAD tree object"
-msgstr ""
+msgstr "gặp lỗi khi tháo dỡ HEAD đối tượng cây"
 
 #: builtin/commit.c:295
 msgid "unable to create temporary index"
@@ -2170,7 +2182,7 @@ msgstr "không thể thực hiện việc chuyển giao (commit) cục bộ tron
 
 #: builtin/commit.c:388
 msgid "cannot do a partial commit during a cherry-pick."
-msgstr ""
+msgstr "không thể thực hiện việc chuyển giao (commit) bộ phận trong khi đang cherry-pick."
 
 #: builtin/commit.c:398
 msgid "cannot read the index"
@@ -2263,6 +2275,8 @@ msgid ""
 "Please enter the commit message for your changes. Lines starting\n"
 "with '#' will be ignored, and an empty message aborts the commit.\n"
 msgstr ""
+"Hãy nhập vào các thông tin để giải thích các thay đổi của bạn. Những dòng được\n"
+"bắt đầu bằng '#' sẽ được bỏ qua, phần chú thích này nếu rỗng sẽ làm hủy bỏ lần chuyển giao (commit).\n"
 
 #: builtin/commit.c:754
 msgid ""
@@ -2270,6 +2284,9 @@ msgid ""
 "with '#' will be kept; you may remove them yourself if you want to.\n"
 "An empty message aborts the commit.\n"
 msgstr ""
+"Hãy nhập vào các thông tin để giải thích các thay đổi của bạn.Những dòng được\n"
+"bắt đầu bằng '#' sẽ được bỏ qua; bạn có thể xóa chúng đi nếu muốn.\n"
+"Phần chú thích này nếu rỗng sẽ làm hủy bỏ lần chuyển giao (commit).\n"
 
 #: builtin/commit.c:767
 #, c-format
@@ -2366,11 +2383,11 @@ msgstr "Các đường dẫn với tùy chọn -a không phân biệt HOA/thư�
 
 #: builtin/commit.c:1258
 msgid "couldn't look up newly created commit"
-msgstr "không thể tìm thấy lần chuyển giao (commit) được tạo mới hơn"
+msgstr "không thể tìm thấy lần chuyển giao (commit) mới hơn đã được tạo"
 
 #: builtin/commit.c:1260
 msgid "could not parse newly created commit"
-msgstr ""
+msgstr "không thể phân tích cú pháp của đối tượng chuyển giao mới hơn đã được tạo"
 
 #: builtin/commit.c:1301
 msgid "detached HEAD"
@@ -2543,9 +2560,9 @@ msgid "more than two blobs given: '%s'"
 msgstr "đã cho nhiều hơn hai đối tượng blob: '%s'"
 
 #: builtin/diff.c:370
-#, fuzzy, c-format
+#, c-format
 msgid "unhandled object '%s' given."
-msgstr "đối tượng đã cho '%s' không hợp lệ."
+msgstr "đã cho đối tượng không thể nắm giữ '%s'."
 
 #: builtin/fetch.c:200
 msgid "Couldn't find remote ref HEAD"
@@ -2710,14 +2727,14 @@ msgid "Invalid %s: '%s'"
 msgstr "%s không hợp lệ: '%s'"
 
 #: builtin/gc.c:90
-#, fuzzy, c-format
+#, c-format
 msgid "insanely long object directory %.*s"
-msgstr "tên của thư mục kết xuất quá dài"
+msgstr "thư mục đối tượng dài một cách điên rồ  %.*s"
 
 #: builtin/gc.c:221
 #, c-format
 msgid "Auto packing the repository for optimum performance.\n"
-msgstr ""
+msgstr "Tự động đóng gói kho chứa để tối ưu hóa hiệu suất làm việc.\n"
 
 #: builtin/gc.c:224
 #, c-format
@@ -2725,6 +2742,8 @@ msgid ""
 "Auto packing the repository for optimum performance. You may also\n"
 "run \"git gc\" manually. See \"git help gc\" for more information.\n"
 msgstr ""
+"Tự động đóng gói kho chứa để tối ưu hóa hiệu suất làm việc.\n"
+"chạy lệnh \"git gc\" một cách thủ công. Hãy xem \"git help gc\" để biết thêm chi tiết.\n"
 
 #: builtin/gc.c:251
 msgid "There are too many unreachable loose objects; run 'git prune' to remove them."
@@ -2921,11 +2940,11 @@ msgstr "%s: máy phục vụ đã trả về %s"
 
 #: builtin/index-pack.c:450
 msgid "offset value overflow for delta base object"
-msgstr ""
+msgstr "tràn giá trị khoảng bù cho đối tượng delta cơ sở"
 
 #: builtin/index-pack.c:458
 msgid "delta base offset is out of bound"
-msgstr ""
+msgstr "khoảng bù cơ sở cho delta nằm ngoài phạm vi"
 
 #: builtin/index-pack.c:466
 #, c-format
@@ -2940,7 +2959,8 @@ msgstr "không thể chạy hàm pread cho tập tin pack"
 #, c-format
 msgid "premature end of pack file, %lu byte missing"
 msgid_plural "premature end of pack file, %lu bytes missing"
-msgstr[0] ""
+msgstr[0] "tập tin pack bị kết thúc sớm, %lu byte bị thiếu"
+msgstr[1] "tập tin pack bị kết thúc sớm, %lu byte bị thiếu"
 
 #: builtin/index-pack.c:510
 #, fuzzy
@@ -2974,7 +2994,7 @@ msgstr "Lỗi trong đối tượng"
 #: builtin/index-pack.c:614
 #, c-format
 msgid "Not all child objects of %s are reachable"
-msgstr ""
+msgstr "Không phải tất cả các đối tượng con của %s là có thể với tới được"
 
 #: builtin/index-pack.c:687
 #: builtin/index-pack.c:713
@@ -2999,7 +3019,7 @@ msgstr "không thể fstat packfile"
 
 #: builtin/index-pack.c:880
 msgid "pack has junk at the end"
-msgstr ""
+msgstr "pack có phần thừa ở cuối"
 
 #: builtin/index-pack.c:903
 msgid "Resolving deltas"
@@ -3054,9 +3074,9 @@ msgid "Cannot open existing pack file '%s'"
 msgstr "Không thể mở tập tin pack đã sẵn có '%s' "
 
 #: builtin/index-pack.c:1249
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open existing pack idx file for '%s'"
-msgstr "Không thể mở tập tin nội dung: %s"
+msgstr "Không thể mở tập tin 'pack idx' cho '%s'"
 
 #: builtin/index-pack.c:1296
 #, c-format
@@ -3104,9 +3124,9 @@ msgid "Could not make %s writable by group"
 msgstr "Không thể làm %s được ghi bởi nhóm"
 
 #: builtin/init-db.c:62
-#, fuzzy, c-format
+#, c-format
 msgid "insanely long template name %s"
-msgstr "tên khối tin quá dài"
+msgstr "tên mẫu dài một cách điên rồ %s"
 
 #: builtin/init-db.c:67
 #, c-format
@@ -3129,9 +3149,9 @@ msgid "cannot readlink '%s'"
 msgstr "không thể readlink '%s'"
 
 #: builtin/init-db.c:99
-#, fuzzy, c-format
+#, c-format
 msgid "insanely long symlink %s"
-msgstr "%s: không thể tạo liên kết tượng trưng tới %s"
+msgstr "liên kết tượng trưng dài một cách điên rồ %s"
 
 #: builtin/init-db.c:102
 #, c-format
@@ -3149,9 +3169,9 @@ msgid "ignoring template %s"
 msgstr "đang lờ đi mẫu %s"
 
 #: builtin/init-db.c:133
-#, fuzzy, c-format
+#, c-format
 msgid "insanely long template path %s"
-msgstr "đường dẫn tty %s quá dài"
+msgstr "đường dẫn mẫu dài một cách điên rồ  %s"
 
 #: builtin/init-db.c:141
 #, c-format
@@ -3230,7 +3250,7 @@ msgstr "không thể chdir (chuyển đổi thư mục) sang %s"
 #: builtin/init-db.c:554
 #, c-format
 msgid "%s (or --work-tree=<directory>) not allowed without specifying %s (or --git-dir=<directory>)"
-msgstr ""
+msgstr "%s (hoặc --work-tree=<thư-mục>) không cho phép không chỉ định %s (hoặc --git-dir=<thư-mục>)"
 
 #: builtin/init-db.c:578
 msgid "Cannot access current working directory"
@@ -3280,7 +3300,7 @@ msgstr "Không phải là một vùng."
 
 #: builtin/log.c:745
 msgid "Could not extract email from committer identity."
-msgstr ""
+msgstr "Không thể rút trích địa chỉ thư điện tử từ định danh người chuyển giao"
 
 #: builtin/log.c:791
 msgid "Cover letter needs email format"
@@ -3458,6 +3478,11 @@ msgid ""
 "Lines starting with '#' will be ignored, and an empty message aborts\n"
 "the commit.\n"
 msgstr ""
+"Hãy nhập vào các thông tin để giải thích tại sao sự hòa trộn này là cần thiết,\n"
+"đặc biệt là khi nó hòa trộn dòng ngược đã cập nhật vào trong một nhánh topic.\n"
+"\n"
+"Những dòng được bắt đầu bằng '#' sẽ được bỏ qua, và phần chú thích này nếu rỗng\n"
+"sẽ làm hủy bỏ lần chuyển giao (commit).\n"
 
 #: builtin/merge.c:916
 msgid "Empty commit message."
@@ -4249,7 +4274,7 @@ msgstr "  Nhánh HEAD: %s"
 #: builtin/remote.c:1139
 #, c-format
 msgid "  HEAD branch (remote HEAD is ambiguous, may be one of the following):\n"
-msgstr ""
+msgstr "  nhánh HEAD (HEAD máy chủ là không rõ ràng, có lẽ là một trong số sau):\n"
 
 #: builtin/remote.c:1151
 #, c-format
@@ -4533,6 +4558,11 @@ msgid ""
 "# Lines starting with '#' will be ignored.\n"
 "#\n"
 msgstr ""
+"\n"
+"#\n"
+"# Viết các ghi chú cho (thẻ) tag\n"
+"# Những dòng được bắt đầu bằng '#' sẽ được bỏ qua.\n"
+"#\n"
 
 #: builtin/tag.c:256
 msgid ""
@@ -4542,6 +4572,11 @@ msgid ""
 "# Lines starting with '#' will be kept; you may remove them yourself if you want to.\n"
 "#\n"
 msgstr ""
+"\n"
+"#\n"
+"# Viết các ghi chú cho (thẻ) tag\n"
+"# Những dòng được bắt đầu bằng '#' sẽ được bỏ qua; bạn có thể xóa chúng đi nếu muốn.\n"
+"#\n"
 
 #: builtin/tag.c:298
 msgid "unable to sign the tag"
@@ -5145,9 +5180,9 @@ msgid "Unable to find current revision in submodule path '$sm_path'"
 msgstr ""
 
 #: git-submodule.sh:555
-#, sh-format
+#, fuzzy, sh-format
 msgid "Unable to fetch in submodule path '$sm_path'"
-msgstr ""
+msgstr "Không thể rebase '$sha1' trong đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:569
 #, sh-format
