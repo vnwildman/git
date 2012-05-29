@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-1.7.10.1\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2012-05-21 08:57+0800\n"
-"PO-Revision-Date: 2012-05-29 08:44+0700\n"
+"PO-Revision-Date: 2012-05-29 15:13+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -934,7 +934,7 @@ msgstr "Đường dẫn '%s' thì ở trong mô-đun-con '%.*s'"
 
 #: builtin/add.c:192
 msgid "Unstaged changes after refreshing the index:"
-msgstr ""
+msgstr "Các thay đổi không được lưu trạng thái sau khi làm tươi mới lại bảng mục lục:"
 
 #: builtin/add.c:195
 #: builtin/add.c:456
@@ -1474,10 +1474,11 @@ msgid "can't open patch '%s'"
 msgstr "không thể mở miếng vá '%s'"
 
 #: builtin/apply.c:4075
-#, fuzzy, c-format
+#, c-format
 msgid "squelched %d whitespace error"
 msgid_plural "squelched %d whitespace errors"
-msgstr[0] "Lỗi DirectFB %d xảy ra."
+msgstr[0] "đã chấm dứt %d lỗi khoảng trắng"
+msgstr[1] "đã chấm dứt %d lỗi khoảng trắng"
 
 #: builtin/apply.c:4081
 #: builtin/apply.c:4091
@@ -1660,7 +1661,7 @@ msgstr "Đổi tên nhánh gặp lỗi"
 #: builtin/branch.c:642
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
-msgstr ""
+msgstr "Đã đổi tên nhánh khuyết danh '%s' đi"
 
 #: builtin/branch.c:646
 #, c-format
@@ -2043,8 +2044,9 @@ msgid "Could not find remote branch %s to clone."
 msgstr "Không tìm thấy nhánh máy chủ %s để nhân bản (clone)."
 
 #: builtin/clone.c:549
+#, fuzzy
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
-msgstr ""
+msgstr "remote HEAD refers to nonexistent ref, không thể checkout.\n"
 
 #: builtin/clone.c:639
 msgid "Too many arguments."
@@ -2369,7 +2371,7 @@ msgstr ""
 
 #: builtin/commit.c:1060
 msgid "Explicit paths specified without -i nor -o; assuming --only paths..."
-msgstr ""
+msgstr "Những đường dẫn rõ ràng được chỉ ra không có tùy chọn -i cũng không -o; đang giả định --only những-đường-dẫn..."
 
 #: builtin/commit.c:1070
 #: builtin/tag.c:577
@@ -2451,6 +2453,9 @@ msgid ""
 "new_index file. Check that disk is not full or quota is\n"
 "not exceeded, and then \"git reset HEAD\" to recover."
 msgstr ""
+"Kho chứa đã hoàn tất việc cập nhật, nhưng không thể ghi vào\n"
+"tập tin new_index (bảng mục lục mới). Hãy kiểm tra xem đĩa có bị đầy quá\n"
+"hay quota (hạn nghạch đĩa cứng) bị vượt quá, và sau đó \"git reset HEAD\" để khắc phục."
 
 #: builtin/describe.c:234
 #, c-format
@@ -2505,6 +2510,8 @@ msgid ""
 "No tags can describe '%s'.\n"
 "Try --always, or create some tags."
 msgstr ""
+"Không có thẻ (tag) có thể mô tả '%s'.\n"
+"Hãy thử --always, hoặt tạo một số thẻ."
 
 #: builtin/describe.c:378
 #, c-format
@@ -2517,6 +2524,8 @@ msgid ""
 "more than %i tags found; listed %i most recent\n"
 "gave up search at %s\n"
 msgstr ""
+"tìm thấy nhiều hơn %i thẻ (tag); đã liệt kê %i gần đây nhất\n"
+"bỏ đi tìm kiếm tại %s\n"
 
 #: builtin/describe.c:436
 msgid "--long is incompatible with --abbrev=0"
@@ -2666,7 +2675,7 @@ msgstr "(không)"
 #: builtin/fetch.c:675
 #, c-format
 msgid "Refusing to fetch into current branch %s of non-bare repository"
-msgstr ""
+msgstr "Từ chối việc lấy (fetch) vào trong nhánh hiện tại %s của một kho chứa không phải kho trần (bare)"
 
 #: builtin/fetch.c:709
 #, c-format
@@ -2699,6 +2708,8 @@ msgid ""
 "No remote repository specified.  Please, specify either a URL or a\n"
 "remote name from which new revisions should be fetched."
 msgstr ""
+"Chưa chỉ ra kho chứa máy chủ.  Xin hãy chỉ định hoặc là URL hoặc\n"
+"tên máy chủ từ cái mà revision mới có thể được fetch (lấy về)."
 
 #: builtin/fetch.c:927
 msgid "You need to specify a tag name."
@@ -2747,7 +2758,7 @@ msgstr ""
 
 #: builtin/gc.c:251
 msgid "There are too many unreachable loose objects; run 'git prune' to remove them."
-msgstr ""
+msgstr "Có quá nhiều đối tượng tự do không được dùng đến; hãy chạy lệnh 'git prune' để xóa bỏ chúng đi."
 
 #: builtin/grep.c:216
 #, c-format
@@ -2841,6 +2852,8 @@ msgid ""
 "'%s': path for unsupported man viewer.\n"
 "Please consider using 'man.<tool>.cmd' instead."
 msgstr ""
+"'%s': đường dẫn không hỗ trợ bộ trình chiếu man.\n"
+"Hãy cân nhắc đến việc sử dụng 'man.<tool>.cmd' để thay thế."
 
 #: builtin/help.c:223
 #, c-format
@@ -2848,6 +2861,8 @@ msgid ""
 "'%s': cmd for supported man viewer.\n"
 "Please consider using 'man.<tool>.path' instead."
 msgstr ""
+"'%s': cmd (lệnh) hỗ trợ bộ trình chiếu man.\n"
+"Hãy cân nhắc đến việc sử dụng 'man.<tool>.path' để thay thế."
 
 #: builtin/help.c:287
 msgid "The most commonly used git commands are:"
@@ -2931,7 +2946,7 @@ msgstr "chữ ký cho pack không khớp"
 #: builtin/index-pack.c:311
 #, c-format
 msgid "pack has bad object at offset %lu: %s"
-msgstr ""
+msgstr "pack có đối tượng sai khoảng bù (offset) %lu: %s"
 
 #: builtin/index-pack.c:405
 #, fuzzy, c-format
@@ -3181,7 +3196,7 @@ msgstr "các mẫu không được tìm thấy %s"
 #: builtin/init-db.c:154
 #, c-format
 msgid "not copying templates of a wrong format version %d from '%s'"
-msgstr ""
+msgstr "không sao chép các mẫu của phiên bản sai định dạng %d từ '%s'"
 
 #: builtin/init-db.c:192
 #, c-format
@@ -3356,7 +3371,7 @@ msgstr "Gặp lỗi khi tạo các tập tin kết xuất"
 #: builtin/log.c:1520
 #, c-format
 msgid "Could not find a tracked remote branch, please specify <upstream> manually.\n"
-msgstr ""
+msgstr "Không tìm thấy nhánh mạng được theo vết, hãy chỉ định <dòng-ngược> một cách thủ công.\n"
 
 #: builtin/log.c:1536
 #: builtin/log.c:1538
@@ -3468,7 +3483,7 @@ msgstr "Không thể đọc từ '%s'"
 #: builtin/merge.c:886
 #, c-format
 msgid "Not committing merge; use 'git commit' to complete the merge.\n"
-msgstr ""
+msgstr "Vẫn chưa hòa trộn các lần chuyển giao (commit); sử dụng lệnh 'git commit' để hoàn tất việc hòa trộn.\n"
 
 #: builtin/merge.c:892
 msgid ""
@@ -3574,7 +3589,7 @@ msgstr "Không thể hòa trộn một cách đúng đắn một lần chuyển 
 
 #: builtin/merge.c:1296
 msgid "Squash commit into empty head not supported yet"
-msgstr ""
+msgstr "Squash commit vào một head trống rỗng vẫn chưa được hỗ trợ"
 
 #: builtin/merge.c:1298
 msgid "Non-fast-forward commit does not make sense into an empty head"
@@ -3923,6 +3938,11 @@ msgid ""
 "\n"
 "    git push %s HEAD:<name-of-remote-branch>\n"
 msgstr ""
+"Bạn hiện nay không ở một nhánh.\n"
+"Để push lịch sử hướng tới trạng thái hiện hành (HEAD đã bị tách rời)\n"
+"ngay bây giờ, sử dụng\n"
+"\n"
+"    git push %s HEAD:<tên-của-nhánh-máy-chủ>\n"
 
 #: builtin/push.c:128
 #, c-format
@@ -3936,7 +3956,7 @@ msgstr ""
 #: builtin/push.c:136
 #, c-format
 msgid "The current branch %s has multiple upstream branches, refusing to push."
-msgstr ""
+msgstr "Nhánh hiện tại %s có đa nhánh ngược dòng (upstream), từ chối push."
 
 #: builtin/push.c:139
 #, c-format
@@ -4078,9 +4098,9 @@ msgid "more than one %s"
 msgstr "nhiều hơn một %s"
 
 #: builtin/remote.c:339
-#, fuzzy, c-format
+#, c-format
 msgid "Could not get fetch map for refspec %s"
-msgstr "Không thể ghi \"%s\": %s"
+msgstr "Không thể lấy ánh xạ (map) fetch cho refspec %s"
 
 #: builtin/remote.c:440
 #: builtin/remote.c:448
@@ -4384,7 +4404,7 @@ msgstr "Không tìm thấy URL như vậy: %s"
 
 #: builtin/remote.c:1497
 msgid "Will not delete all non-push URLs"
-msgstr ""
+msgstr "Sẽ không xóa những địa chỉ URL không-push"
 
 #: builtin/reset.c:33
 msgid "mixed"
@@ -4605,7 +4625,7 @@ msgstr "Nội dung ghi chú còn lại %s\n"
 
 #: builtin/tag.c:425
 msgid "switch 'points-at' requires an object"
-msgstr ""
+msgstr "chuyển đến 'points-at' yêu cần một đối tượng"
 
 #: builtin/tag.c:427
 #, c-format
@@ -4970,7 +4990,7 @@ msgstr "Full là không thể thực hiện bởi vì bạn có những tập ti
 
 #: git-pull.sh:197
 msgid "updating an unborn branch with changes added to the index"
-msgstr ""
+msgstr "đang cập nhật một nhánh chưa được sinh ra với các thay đổi được thêm vào bảng mục lục"
 
 #: git-pull.sh:253
 msgid "Cannot merge multiple branches into empty head"
@@ -5093,14 +5113,14 @@ msgid "cannot strip one component off url '$remoteurl'"
 msgstr ""
 
 #: git-submodule.sh:109
-#, sh-format
+#, fuzzy, sh-format
 msgid "No submodule mapping found in .gitmodules for path '$sm_path'"
-msgstr ""
+msgstr "Không tìm thấy url cho đường dẫn mô-đun-con '$sm_path' trong .gitmodules"
 
 #: git-submodule.sh:150
 #, sh-format
 msgid "Clone of '$url' into submodule path '$sm_path' failed"
-msgstr ""
+msgstr "Nhân bản '$url' vào đường dẫn mô-đun-con '$sm_path' gặp lỗi"
 
 #: git-submodule.sh:160
 #, sh-format
@@ -5145,27 +5165,27 @@ msgstr "Đang nhập '$prefix$sm_path'"
 #: git-submodule.sh:363
 #, sh-format
 msgid "Stopping at '$sm_path'; script returned non-zero status."
-msgstr ""
+msgstr "Dừng lại tại '$sm_path'; script trả về trạng thái khác không."
 
 #: git-submodule.sh:405
 #, sh-format
 msgid "No url found for submodule path '$sm_path' in .gitmodules"
-msgstr ""
+msgstr "Không tìm thấy url cho đường dẫn mô-đun-con '$sm_path' trong .gitmodules"
 
 #: git-submodule.sh:414
 #, sh-format
 msgid "Failed to register url for submodule path '$sm_path'"
-msgstr ""
+msgstr "Gặp lỗi khi đăng ký url cho đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:422
 #, sh-format
 msgid "Failed to register update mode for submodule path '$sm_path'"
-msgstr ""
+msgstr "Gặp lỗi khi đăng ký chế độ cập nhật cho đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:424
 #, sh-format
 msgid "Submodule '$name' ($url) registered for path '$sm_path'"
-msgstr ""
+msgstr "Mô-đun-con '$name' ($url) được đăng ký cho đường dẫn '$sm_path'"
 
 #: git-submodule.sh:523
 #, sh-format
@@ -5173,6 +5193,8 @@ msgid ""
 "Submodule path '$sm_path' not initialized\n"
 "Maybe you want to use 'update --init'?"
 msgstr ""
+"Đường dẫn mô-đun-con '$sm_path' chưa được khởi tạo\n"
+"Có lẽ bạn muốn sử dụng lệnh 'update --init'?"
 
 #: git-submodule.sh:536
 #, sh-format
@@ -5180,9 +5202,9 @@ msgid "Unable to find current revision in submodule path '$sm_path'"
 msgstr ""
 
 #: git-submodule.sh:555
-#, fuzzy, sh-format
+#, sh-format
 msgid "Unable to fetch in submodule path '$sm_path'"
-msgstr "Không thể rebase '$sha1' trong đường dẫn mô-đun-con '$sm_path'"
+msgstr "Không thể lấy về (fetch) trong đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:569
 #, sh-format
@@ -5216,9 +5238,9 @@ msgstr "Đường dẫn mô-đun-con '$sm_path': được checkout '$sha1'"
 
 #: git-submodule.sh:604
 #: git-submodule.sh:927
-#, sh-format
+#, fuzzy, sh-format
 msgid "Failed to recurse into submodule path '$sm_path'"
-msgstr ""
+msgstr "Nhân bản '$url' vào đường dẫn mô-đun-con '$sm_path' gặp lỗi"
 
 #: git-submodule.sh:712
 msgid "--"
