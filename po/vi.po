@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-1.7.10.1\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2012-05-21 08:57+0800\n"
-"PO-Revision-Date: 2012-05-29 15:13+0700\n"
+"PO-Revision-Date: 2012-05-30 14:31+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -835,7 +835,7 @@ msgstr "Lần chuyển giao (commit) khởi đầu"
 
 #: wt-status.c:769
 msgid "Untracked"
-msgstr "Không bị theo vết"
+msgstr "Không được theo vết"
 
 #: wt-status.c:771
 msgid "Ignored"
@@ -844,7 +844,7 @@ msgstr "Bị bỏ qua"
 #: wt-status.c:773
 #, c-format
 msgid "Untracked files not listed%s"
-msgstr "Những tập tin không được theo vết không được liệt kê ra %s"
+msgstr "Những tập tin không bị theo vết không được liệt kê ra %s"
 
 #: wt-status.c:775
 msgid " (use -u option to show untracked files)"
@@ -1088,7 +1088,8 @@ msgstr "miếng vá phân mảnh mà không có phần đầu tại dòng %d: %.
 #, c-format
 msgid "git diff header lacks filename information when removing %d leading pathname component (line %d)"
 msgid_plural "git diff header lacks filename information when removing %d leading pathname components (line %d)"
-msgstr[0] ""
+msgstr[0] "phần đầu diff cho git  thiếu thông tin tên tập tin khi gỡ bỏ đi %d trong thành phần dẫn đầu tên của đường dẫn (dòng %d)"
+msgstr[1] "phần đầu diff cho git  thiếu thông tin tên tập tin khi gỡ bỏ đi %d trong thành phần dẫn đầu tên của đường dẫn (dòng %d)"
 
 #: builtin/apply.c:1628
 msgid "new file depends on old contents"
@@ -2044,9 +2045,8 @@ msgid "Could not find remote branch %s to clone."
 msgstr "Không tìm thấy nhánh máy chủ %s để nhân bản (clone)."
 
 #: builtin/clone.c:549
-#, fuzzy
 msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
-msgstr "remote HEAD refers to nonexistent ref, không thể checkout.\n"
+msgstr "refers HEAD máy chủ  chỉ đến ref không tồn tại, không thể checkout.\n"
 
 #: builtin/clone.c:639
 msgid "Too many arguments."
@@ -2149,6 +2149,10 @@ msgid ""
 "it empty. You can repeat your command with --allow-empty, or you can\n"
 "remove the commit entirely with \"git reset HEAD^\".\n"
 msgstr ""
+"Bạn đã yêu cầu amend (tu bổ) phần lớn các lần chuyển giao (commit) gần đây, nhưng làm như thế\n"
+"có thể làm cho nó trở nên trống rỗng. Bạn có thể lặp lại lệnh của mình bằng --allow-empty,\n"
+"hoặc là bạn gỡ bỏ các lần chuyển giao một cách hoàn toàn bằng lệnh:\n"
+"\"git reset HEAD^\".\n"
 
 #: builtin/commit.c:60
 msgid ""
@@ -2159,6 +2163,12 @@ msgid ""
 "\n"
 "Otherwise, please use 'git reset'\n"
 msgstr ""
+"Lần cherry-pick trước hiện nay trống rỗng, có lẽ là bởi vì sự phân giải xung đột.\n"
+"Nếu bạn muốn chuyển giao nó cho dù thế nào đi nữa, sử dụng:\n"
+"\n"
+"    git commit --allow-empty\n"
+"\n"
+"Nếu không, hãy thử sử dụng 'git reset'\n"
 
 #: builtin/commit.c:253
 msgid "failed to unpack HEAD tree object"
@@ -2261,6 +2271,11 @@ msgid ""
 "\t%s\n"
 "and try again.\n"
 msgstr ""
+"\n"
+"Nó trông giống với việc bạn đang chuyển giao một lần hòa trộn.\n"
+"Nếu không phải vậy, xin hãy gỡ bỏ tập tin\n"
+"\t%s\n"
+"và thử lại.\n"
 
 #: builtin/commit.c:737
 #, c-format
@@ -2271,6 +2286,11 @@ msgid ""
 "\t%s\n"
 "and try again.\n"
 msgstr ""
+"\n"
+"Nó trông giống với việc bạn đang chuyển giao một lần cherry-pick.\n"
+"Nếu không phải vậy, xin hãy gỡ bỏ tập tin\n"
+"\t%s\n"
+"và thử lại.\n"
 
 #: builtin/commit.c:749
 msgid ""
@@ -2652,6 +2672,8 @@ msgid ""
 "some local refs could not be updated; try running\n"
 " 'git remote prune %s' to remove any old, conflicting branches"
 msgstr ""
+"một số tham chiếu (refs) nội bộ không thể được cập nhật; hãy thử chạy\n"
+" 'git remote prune %s' để bỏ đi những nhánh cũ, hay bị xung đột"
 
 #: builtin/fetch.c:549
 #, c-format
@@ -2709,7 +2731,7 @@ msgid ""
 "remote name from which new revisions should be fetched."
 msgstr ""
 "Chưa chỉ ra kho chứa máy chủ.  Xin hãy chỉ định hoặc là URL hoặc\n"
-"tên máy chủ từ cái mà revision mới có thể được fetch (lấy về)."
+"tên máy chủ từ cái mà những điểm xét duyệt mới có thể được fetch (lấy về)."
 
 #: builtin/fetch.c:927
 msgid "You need to specify a tag name."
@@ -2949,9 +2971,9 @@ msgid "pack has bad object at offset %lu: %s"
 msgstr "pack có đối tượng sai khoảng bù (offset) %lu: %s"
 
 #: builtin/index-pack.c:405
-#, fuzzy, c-format
+#, c-format
 msgid "inflate returned %d"
-msgstr "%s: máy phục vụ đã trả về %s"
+msgstr "xả nén trả về %d"
 
 #: builtin/index-pack.c:450
 msgid "offset value overflow for delta base object"
@@ -2978,9 +3000,8 @@ msgstr[0] "tập tin pack bị kết thúc sớm, %lu byte bị thiếu"
 msgstr[1] "tập tin pack bị kết thúc sớm, %lu byte bị thiếu"
 
 #: builtin/index-pack.c:510
-#, fuzzy
 msgid "serious inflate inconsistency"
-msgstr "%s: Sự mâu thuẫn không mong đợi khi tạo thư mục"
+msgstr "sự mâu thuẫn xả nén nghiêm trọng"
 
 #: builtin/index-pack.c:583
 #, c-format
@@ -3052,9 +3073,9 @@ msgstr[0] "pack có %d delta chưa được giải quyết"
 msgstr[1] "pack có %d delta chưa được giải quyết"
 
 #: builtin/index-pack.c:998
-#, fuzzy, c-format
+#, c-format
 msgid "unable to deflate appended object (%d)"
-msgstr "Không thể mở tập tin đối tượng: %s: %s"
+msgstr "không thể xả đối tượng nối thêm (%d)"
 
 #: builtin/index-pack.c:1077
 #, c-format
@@ -3235,9 +3256,8 @@ msgid "%s%s Git repository in %s%s\n"
 msgstr "%s%s kho Git trong %s%s\n"
 
 #: builtin/init-db.c:420
-#, fuzzy
 msgid "Reinitialized existing"
-msgstr "Thoát ra"
+msgstr "Khởi tạo lại đã sẵn có rồi"
 
 #: builtin/init-db.c:420
 msgid "Initialized empty"
@@ -3371,7 +3391,7 @@ msgstr "Gặp lỗi khi tạo các tập tin kết xuất"
 #: builtin/log.c:1520
 #, c-format
 msgid "Could not find a tracked remote branch, please specify <upstream> manually.\n"
-msgstr "Không tìm thấy nhánh mạng được theo vết, hãy chỉ định <dòng-ngược> một cách thủ công.\n"
+msgstr "Không tìm thấy nhánh mạng bị theo vết, hãy chỉ định <dòng-ngược> một cách thủ công.\n"
 
 #: builtin/log.c:1536
 #: builtin/log.c:1538
@@ -3616,9 +3636,9 @@ msgstr "Thực hiện lệnh fast-forward là không thể được, đang bỏ 
 
 #: builtin/merge.c:1513
 #: builtin/merge.c:1592
-#, fuzzy, c-format
+#, c-format
 msgid "Rewinding the tree to pristine...\n"
-msgstr "không thể đọc cây (%s)"
+msgstr "Đang tua lại cây thành thời xa xưa...\n"
 
 #: builtin/merge.c:1517
 #, c-format
@@ -3626,9 +3646,9 @@ msgid "Trying merge strategy %s...\n"
 msgstr "Đang thử chiến lược hòa trộn %s...\n"
 
 #: builtin/merge.c:1583
-#, fuzzy, c-format
+#, c-format
 msgid "No merge strategy handled the merge.\n"
-msgstr "Hòa trộn với chiến lược %s gặp lỗi.\n"
+msgstr "Không có chiến lược hòa trộn nào được nắm giữ (handle) sự hòa trộn.\n"
 
 #: builtin/merge.c:1585
 #, c-format
@@ -3898,9 +3918,8 @@ msgid "unable to parse value '%s' for option %s"
 msgstr "không thể phân tích giá trị '%s' cho tùy chọn %s"
 
 #: builtin/push.c:45
-#, fuzzy
 msgid "tag shorthand without <tag>"
-msgstr "biên dịch mà không hỗ trợ -x"
+msgstr "dùng tốc ký tag không có <thẻ>"
 
 #: builtin/push.c:64
 msgid "--delete only accepts plain target ref names"
@@ -3952,6 +3971,10 @@ msgid ""
 "\n"
 "    git push --set-upstream %s %s\n"
 msgstr ""
+"Nhánh hiện tại %s không có nhánh ngược dòng (upstream) nào.\n"
+"Để push (đẩy lên) nhánh hiện tại và đặt máy chủ như là ngược dòng (upstream), sử dụng\n"
+"\n"
+"    git push --set-upstream %s %s\n"
 
 #: builtin/push.c:136
 #, c-format
@@ -3965,10 +3988,13 @@ msgid ""
 "your current branch '%s', without telling me what to push\n"
 "to update which remote branch."
 msgstr ""
+"Bạn đang push (đẩy lên) máy chủ '%s', mà nó không phải là dòng ngược (upstream) của\n"
+"nhánh hiện tại '%s' của bạn, mà không báo cho tôi biết là cái gì được push\n"
+"để cập nhật nhánh máy chủ nào."
 
 #: builtin/push.c:174
 msgid "You didn't specify any refspecs to push, and push.default is \"nothing\"."
-msgstr ""
+msgstr "Bạn đã không chỉ ra một refspecs nào để push, và push.default là \"không là gì cả\"."
 
 #: builtin/push.c:181
 msgid ""
@@ -4020,6 +4046,14 @@ msgid ""
 "\n"
 "    git push <name>\n"
 msgstr ""
+"Chưa cấu hình đích để push (đẩy lên).\n"
+"Hoặc là chỉ ra URL từ dòng lệnh hoặc là cấu hình một kho máy chủ sử dụng\n"
+"\n"
+"    git remote add <tên> <url>\n"
+"\n"
+"và sau đó push sử dụng tên máy chủ\n"
+"\n"
+"    git push <tên>\n"
 
 #: builtin/push.c:285
 msgid "--all and --tags are incompatible"
@@ -4177,6 +4211,11 @@ msgid_plural ""
 "Note: Some branches outside the refs/remotes/ hierarchy were not removed;\n"
 "to delete them, use:"
 msgstr[0] ""
+"Chú ý: Một nhánh nằm ngoài hệ thống refs/remotes/ đã không được gỡ bỏ đi;\n"
+"để xóa đi, sử dụng:"
+msgstr[1] ""
+"Chú ý: Một số nhánh nằm ngoài hệ thống refs/remotes/ đã không được gỡ bỏ đi;\n"
+"để xóa đi, sử dụng:"
 
 #: builtin/remote.c:943
 #, c-format
@@ -4185,7 +4224,7 @@ msgstr " mới (lần lấy về tiếp theo sẽ lưu trong remotes/%s)"
 
 #: builtin/remote.c:946
 msgid " tracked"
-msgstr " được theo vết"
+msgstr " bị theo vết"
 
 #: builtin/remote.c:948
 msgid " stale (use 'git remote prune' to remove)"
@@ -4316,7 +4355,7 @@ msgstr[1] "  Những nhánh nội bộ đã được cấu hình cho lệnh 'git
 
 #: builtin/remote.c:1171
 msgid "  Local refs will be mirrored by 'git push'"
-msgstr ""
+msgstr "  refs nội bộ sẽ được phản chiếu bởi lệnh 'git push'"
 
 #: builtin/remote.c:1178
 #, c-format
@@ -4522,6 +4561,8 @@ msgid ""
 "'%s' has changes staged in the index\n"
 "(use --cached to keep the file, or -f to force removal)"
 msgstr ""
+"'%s' có các thay đổi được lưu trạng thái trong bảng mục lục\n"
+"(sử dụng --cached để giữ tập tin, hoặc -f để ép buộc gỡ bỏ)"
 
 #: builtin/rm.c:119
 #, c-format
@@ -4529,6 +4570,8 @@ msgid ""
 "'%s' has local modifications\n"
 "(use --cached to keep the file, or -f to force removal)"
 msgstr ""
+"'%s' có các thay đổi nội bộ\n"
+"(sử dụng --cached để giữ tập tin, hoặc -f để ép buộc gỡ bỏ)"
 
 #: builtin/rm.c:194
 #, c-format
@@ -4772,7 +4815,7 @@ msgstr "Di chuyển, đổi tên một tập tin, thư mục hay liên kết tư
 
 #: common-cmds.h:21
 msgid "Fetch from and merge with another repository or a local branch"
-msgstr ""
+msgstr "Fetch (lấy về) và hòa trộng với kho khác hay nhánh nội bộ"
 
 #: common-cmds.h:22
 msgid "Update remote refs along with associated objects"
@@ -4808,21 +4851,23 @@ msgstr "Bạn cần đặt thông tin về người chuyển giao mã nguồn tr
 
 #: git-am.sh:137
 msgid "Repository lacks necessary blobs to fall back on 3-way merge."
-msgstr ""
+msgstr "Kho thiếu đối tượng blob cần thiết để trở về trên '3-way merge'."
 
 #: git-am.sh:154
 msgid ""
 "Did you hand edit your patch?\n"
 "It does not apply to blobs recorded in its index."
 msgstr ""
+"Bạn đã sửa miếng vá của mình bằng cách thủ công à?\n"
+"Nó không thể áp dụng các blob đã được ghi lại trong bảng mục lục của nó."
 
 #: git-am.sh:163
 msgid "Falling back to patching base and 3-way merge..."
-msgstr ""
+msgstr "Đang trở lại để vá cơ sở và '3-way merge'..."
 
 #: git-am.sh:275
 msgid "Only one StGIT patch series can be applied at once"
-msgstr ""
+msgstr "Chỉ có một sê-ri miếng vá StGIT được áp dụng một lúc"
 
 #: git-am.sh:362
 #, sh-format
@@ -4840,7 +4885,7 @@ msgstr "Tùy chọn -d không còn được hỗ trợ nữa. Xin đừng sử d
 #: git-am.sh:481
 #, sh-format
 msgid "previous rebase directory $dotest still exists but mbox given."
-msgstr ""
+msgstr "thư mục rebase trước $dotest vẫn chưa sẵn sàng nhưng mbox được đưa ra."
 
 #: git-am.sh:486
 msgid "Please make up your mind. --skip or --abort?"
@@ -4848,7 +4893,7 @@ msgstr "Xin hãy rõ ràng. --skip hay --abort?"
 
 #: git-am.sh:513
 msgid "Resolve operation not in progress, we are not resuming."
-msgstr ""
+msgstr "Thao tác phân giải không đang được tiến hành, chúng ta không phục hồi lại."
 
 #: git-am.sh:579
 #, sh-format
@@ -4907,7 +4952,7 @@ msgstr "Việc checkout '$start_head' gặp lỗi. Hãy thử 'git bisect reset 
 
 #: git-bisect.sh:140
 msgid "won't bisect on seeked tree"
-msgstr ""
+msgstr "sẽ không bisect trêm cây được seek"
 
 #: git-bisect.sh:144
 msgid "Bad HEAD - strange symbolic ref"
@@ -5002,7 +5047,7 @@ msgstr "Không thể thực hiện lệnh rebase (cơ cấu lại) trên nhiều
 
 #: git-stash.sh:51
 msgid "git stash clear with parameters is unimplemented"
-msgstr ""
+msgstr "git stash clear với các tham số là chưa được thực hiện (không nhận đối số)"
 
 #: git-stash.sh:74
 msgid "You do not have the initial commit yet"
@@ -5110,12 +5155,12 @@ msgstr "(Để phục hồi lại chúng hãy gõ \"git stash apply\")"
 #: git-submodule.sh:56
 #, sh-format
 msgid "cannot strip one component off url '$remoteurl'"
-msgstr ""
+msgstr "không thể tháo bỏ một thành phần ra khỏi url '$remoteurl'"
 
 #: git-submodule.sh:109
-#, fuzzy, sh-format
+#, sh-format
 msgid "No submodule mapping found in .gitmodules for path '$sm_path'"
-msgstr "Không tìm thấy url cho đường dẫn mô-đun-con '$sm_path' trong .gitmodules"
+msgstr "Không tìm thấy ánh xạ (mapping) mô-đun-con trong .gitmodules cho đường dẫn '$sm_path'"
 
 #: git-submodule.sh:150
 #, sh-format
@@ -5125,7 +5170,7 @@ msgstr "Nhân bản '$url' vào đường dẫn mô-đun-con '$sm_path' gặp l�
 #: git-submodule.sh:160
 #, sh-format
 msgid "Gitdir '$a' is part of the submodule path '$b' or vice versa"
-msgstr ""
+msgstr "Gitdir '$a' là bộ phận của đường dẫn mô-đun-con '$b' hoặc \"vice versa\""
 
 #: git-submodule.sh:249
 #, sh-format
@@ -5199,7 +5244,7 @@ msgstr ""
 #: git-submodule.sh:536
 #, sh-format
 msgid "Unable to find current revision in submodule path '$sm_path'"
-msgstr ""
+msgstr "Không tìm thấy điểm xét lại hiện hành trong đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:555
 #, sh-format
@@ -5238,9 +5283,9 @@ msgstr "Đường dẫn mô-đun-con '$sm_path': được checkout '$sha1'"
 
 #: git-submodule.sh:604
 #: git-submodule.sh:927
-#, fuzzy, sh-format
+#, sh-format
 msgid "Failed to recurse into submodule path '$sm_path'"
-msgstr "Nhân bản '$url' vào đường dẫn mô-đun-con '$sm_path' gặp lỗi"
+msgstr "Gặp lỗi khi đệ quy vào trong đường dẫn mô-đun-con '$sm_path'"
 
 #: git-submodule.sh:712
 msgid "--"
