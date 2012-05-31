@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-1.7.10.1\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2012-05-21 08:57+0800\n"
-"PO-Revision-Date: 2012-05-30 14:31+0700\n"
+"PO-Revision-Date: 2012-05-31 09:06+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1133,7 +1133,7 @@ msgstr "miếng vá định dạng nhị phân không được nhận ra tại d
 #: builtin/apply.c:1958
 #, c-format
 msgid "patch with only garbage at line %d"
-msgstr ""
+msgstr "vá chỉ với 'garbage' tại dòng %d"
 
 #: builtin/apply.c:2048
 #, c-format
@@ -1158,7 +1158,8 @@ msgstr "sai khởi đầu dòng: '%c'"
 #, c-format
 msgid "Hunk #%d succeeded at %d (offset %d line)."
 msgid_plural "Hunk #%d succeeded at %d (offset %d lines)."
-msgstr[0] ""
+msgstr[0] "Khối dữ liệu #%d thành công tại %d (offset %d dòng)."
+msgstr[1] "Khối dữ liệu #%d thành công tại %d (offset %d dòng)."
 
 #: builtin/apply.c:2775
 #, c-format
@@ -1207,7 +1208,7 @@ msgstr "đọc %s gặp lỗi"
 
 #: builtin/apply.c:3084
 msgid "removal patch leaves file contents"
-msgstr ""
+msgstr "loại bỏ miếng vá để lại nội dung tập tin"
 
 #: builtin/apply.c:3105
 #, c-format
@@ -1290,7 +1291,7 @@ msgstr "không thể lấy trạng thái về tập tin %s mới hơn đã đư�
 #: builtin/apply.c:3519
 #, c-format
 msgid "unable to create backing store for newly created file %s"
-msgstr ""
+msgstr "không thể tạo 'backing store' cho tập tin được tạo mới hơn %s"
 
 #: builtin/apply.c:3522
 #, c-format
@@ -1402,7 +1403,7 @@ msgstr "đồng thời áp dụng miếng vá (sử dụng với tùy chọn --s
 
 #: builtin/apply.c:3990
 msgid "build a temporary index based on embedded index information"
-msgstr ""
+msgstr "xây dựng bảng mục lục tạm thời trên cơ sở thông tin bảng mục lục được nhúng"
 
 #: builtin/apply.c:3992
 msgid "paths are separated with NUL character"
@@ -1435,7 +1436,7 @@ msgstr "đừng hy vọng có ít nhất một dòng nội dung"
 
 #: builtin/apply.c:4010
 msgid "leave the rejected hunks in corresponding *.rej files"
-msgstr ""
+msgstr "để lại khối dữ liệu bị từ chối trong các tập tin *.rej tương ứng"
 
 #: builtin/apply.c:4012
 msgid "allow overlapping hunks"
@@ -1447,7 +1448,7 @@ msgstr "chi tiết"
 
 #: builtin/apply.c:4015
 msgid "tolerate incorrectly detected missing new-line at the end of file"
-msgstr ""
+msgstr "dung sai không chính xác đã tìm thấy thiếu dòng mới tại cuối tập tin"
 
 #: builtin/apply.c:4018
 msgid "do not trust the line counts in the hunk headers"
@@ -1698,7 +1699,7 @@ msgstr "--column và --verbose xung khắc nhau"
 
 #: builtin/branch.c:857
 msgid "-a and -r options to 'git branch' do not make sense with a branch name"
-msgstr "hai tùy chọn -a và -r áp dụng cho lệnh 'git branch' không làm cho nó phân biệt HOA/thường đối với tên nhánh"
+msgstr "hai tùy chọn -a và -r áp dụng cho lệnh 'git branch' không hợp lý đối với tên nhánh"
 
 #: builtin/bundle.c:47
 #, c-format
@@ -2347,7 +2348,7 @@ msgstr "Chế độ cho các tập tin không bị theo vết không hợp lệ 
 
 #: builtin/commit.c:998
 msgid "Using both --reset-author and --author does not make sense"
-msgstr "Sử dụng cả hai tùy chọn --reset-author và --author không phân biệt HOA/thường"
+msgstr "Sử dụng cả hai tùy chọn --reset-author và --author không hợp lý"
 
 #: builtin/commit.c:1009
 msgid "You have nothing to amend."
@@ -2383,11 +2384,11 @@ msgstr "Chỉ một trong các tùy chọn --include/--only/--all/--interactive/
 
 #: builtin/commit.c:1056
 msgid "No paths with --include/--only does not make sense."
-msgstr "Không đường dẫn với các tùy chọn --include/--only không làm cho phân biệt HOA/thường."
+msgstr "Không đường dẫn với các tùy chọn --include/--only không hợp lý."
 
 #: builtin/commit.c:1058
 msgid "Clever... amending the last one with dirty index."
-msgstr ""
+msgstr "Giỏi... đang tu bổ cái cuối với bảng mục lục phi nghĩa."
 
 #: builtin/commit.c:1060
 msgid "Explicit paths specified without -i nor -o; assuming --only paths..."
@@ -2401,7 +2402,7 @@ msgstr "Chế độ dọn dẹp không hợp lệ %s"
 
 #: builtin/commit.c:1075
 msgid "Paths with -a does not make sense."
-msgstr "Các đường dẫn với tùy chọn -a không phân biệt HOA/thường."
+msgstr "Các đường dẫn với tùy chọn -a không hợp lý."
 
 #: builtin/commit.c:1258
 msgid "couldn't look up newly created commit"
@@ -2485,7 +2486,7 @@ msgstr "thẻ đã được ghi chú %s không sẵn để dùng"
 #: builtin/describe.c:238
 #, c-format
 msgid "annotated tag %s has no embedded name"
-msgstr ""
+msgstr "thẻ được chú giải %s không có tên nhúng"
 
 #: builtin/describe.c:240
 #, c-format
@@ -2523,6 +2524,8 @@ msgid ""
 "No annotated tags can describe '%s'.\n"
 "However, there were unannotated tags: try --tags."
 msgstr ""
+"Không có thẻ được chú giải nào được mô tả là '%s'.\n"
+"Tuy nhiên, ở đây có những thẻ không được chú giải: hãy thử --tags."
 
 #: builtin/describe.c:357
 #, c-format
@@ -2743,7 +2746,7 @@ msgstr "lệnh lấy về sử dụng tùy chọn --all sẽ không lấy đối
 
 #: builtin/fetch.c:981
 msgid "fetch --all does not make sense with refspecs"
-msgstr "lệnh lấy về sử dụng tùy chọn --all sẽ không phân biệt HOA/thường với refspecs"
+msgstr "lệnh lấy về fetch sử dụng tùy chọn --all không hợp lý với refspecs"
 
 #: builtin/fetch.c:992
 #, c-format
@@ -2752,7 +2755,7 @@ msgstr "không có nhóm máy chủ hay máy chủ như thế: %s"
 
 #: builtin/fetch.c:1000
 msgid "Fetching a group and specifying refspecs does not make sense"
-msgstr "Việc lấy về cả một nhóm và chỉ định refspecs không phân biệt HOA/thường"
+msgstr "Việc lấy về cả một nhóm và chỉ định refspecs không hợp lý"
 
 #: builtin/gc.c:63
 #, c-format
@@ -3339,7 +3342,7 @@ msgstr "Không thể rút trích địa chỉ thư điện tử từ định dan
 
 #: builtin/log.c:791
 msgid "Cover letter needs email format"
-msgstr ""
+msgstr "'Cover letter' cần cho định dạng thư"
 
 #: builtin/log.c:885
 #, c-format
@@ -3365,15 +3368,15 @@ msgstr "--subject-prefix và -k xung khắc nhau."
 
 #: builtin/log.c:1234
 msgid "--name-only does not make sense"
-msgstr "--name-only không phân biệt HOA/thường"
+msgstr "--name-only không hợp lý"
 
 #: builtin/log.c:1236
 msgid "--name-status does not make sense"
-msgstr "--name-status không phân biệt HOA/thường"
+msgstr "--name-status không hợp lý"
 
 #: builtin/log.c:1238
 msgid "--check does not make sense"
-msgstr "--check không phân biệt HOA/thường"
+msgstr "--check không hợp lý"
 
 #: builtin/log.c:1261
 msgid "standard output, or directory, which one?"
@@ -3483,7 +3486,7 @@ msgstr "Không thể ghi bảng mục lục"
 
 #: builtin/merge.c:710
 msgid "Not handling anything other than two heads merge."
-msgstr ""
+msgstr "Không cầm nắm gì ngoài hai head hòa trộn"
 
 #: builtin/merge.c:724
 #, c-format
@@ -3613,7 +3616,7 @@ msgstr "Squash commit vào một head trống rỗng vẫn chưa được hỗ t
 
 #: builtin/merge.c:1298
 msgid "Non-fast-forward commit does not make sense into an empty head"
-msgstr ""
+msgstr "Chuyển giao (commit) không-fast-forward không hợp lý ở trong một head trống rỗng"
 
 #: builtin/merge.c:1413
 #, c-format
@@ -3663,7 +3666,7 @@ msgstr "Sử dụng %s để chuẩn bị giải quyết bằng tay.\n"
 #: builtin/merge.c:1606
 #, c-format
 msgid "Automatic merge went well; stopped before committing as requested\n"
-msgstr ""
+msgstr "Hòa trộn tự động đã trở nên tốt; bị dừng trước khi việc chuyển giao được yêu cầu\n"
 
 #: builtin/mv.c:108
 #, c-format
@@ -3947,6 +3950,16 @@ msgid ""
 "    git push %s %s\n"
 "%s"
 msgstr ""
+"Nhánh dòng ngược (upstream) của nhánh hiện tại của bạn không khớp\n"
+"với tên của nhánh hiện tại của bạn.  Để push đến nhánh dòng ngược\n"
+"trên máy chủ, sử dụng\n"
+"\n"
+"    git push %s HEAD:%s\n"
+"\n"
+"Để push tới nhánh cùng tên trên máy chủ, sử dụng\n"
+"\n"
+"    git push %s %s\n"
+"%s"
 
 #: builtin/push.c:121
 #, c-format
@@ -4003,6 +4016,10 @@ msgid ""
 "before pushing again.\n"
 "See the 'Note about fast-forwards' in 'git push --help' for details."
 msgstr ""
+"Việc cập nhật bị từ chối bởi vì đầu mút của nhánh được push nằm đằng sau bộ\n"
+"phận tương ứng của máy chủ. Hòa trộn với các thay đổi từ máy chủ (v.d. 'git pull')\n"
+"trước khi lại push lần nữa.\n"
+"Xem trong phần 'Note about fast-forwards' trong nội dung từ lệnh 'git push --help'."
 
 #: builtin/push.c:187
 msgid ""
@@ -4011,6 +4028,10 @@ msgid ""
 "specify branches to push or set the 'push.default' configuration\n"
 "variable to 'current' or 'upstream' to push only the current branch."
 msgstr ""
+"Việc cập nhật bị từ chối bởi vì đầu mút của nhánh được push nằm đằng sau bộ\n"
+"phận tương ứng của máy chủ. Nếu bạn không có ý định push nhánh đó, bạn có lẽ muốn\n"
+"chỉ định các nhánh để push hoặt là đặt nội dung cho biến cấu hình 'push.default'\n"
+"thành 'current' hoặc 'upstream' để push chỉ nhánh hiện hành mà thôi."
 
 #: builtin/push.c:193
 msgid ""
@@ -4019,6 +4040,10 @@ msgid ""
 "(e.g. 'git pull') before pushing again.\n"
 "See the 'Note about fast-forwards' in 'git push --help' for details."
 msgstr ""
+"Việc cập nhật bị từ chối bởi vì đầu mút của nhánh được push nằm đằng sau bộ\n"
+"phận tương ứng của máy chủ. Checkou nhánh này và hòa trộn với các thay đổi từ máy chủ\n"
+"(v.d. 'git pull') trước khi lại push lần nữa.\n"
+"Xem trong phần 'Note about fast-forwards' trong nội dung từ lệnh 'git push --help'."
 
 #: builtin/push.c:233
 #, c-format
@@ -4081,7 +4106,7 @@ msgstr "--delete là xung khắc với các tùy chọn --all, --mirror và --ta
 
 #: builtin/push.c:387
 msgid "--delete doesn't make sense without any refs"
-msgstr "--delete không phân biệt HOA/thường không có bất kỳ tham chiếu (refs) nào"
+msgstr "--delete không hợp lý nếu không có bất kỳ tham chiếu (refs) nào"
 
 #: builtin/remote.c:98
 #, c-format
@@ -4107,7 +4132,7 @@ msgstr "đang chỉ định một nhánh master không phân biệt HOA/thườn
 
 #: builtin/remote.c:187
 msgid "specifying branches to track makes sense only with fetch mirrors"
-msgstr ""
+msgstr "chỉ định những nhánh để theo vết chỉ hợp lý với các 'fetch mirror'"
 
 #: builtin/remote.c:195
 #: builtin/remote.c:646
@@ -4177,6 +4202,9 @@ msgid ""
 "\t%s\n"
 "\tPlease update the configuration manually if necessary."
 msgstr ""
+"Không cập nhật 'non-default fetch respec'\n"
+"\t%s\n"
+"\tXin hãy cập nhật phần cấu hình một cách thủ công nếu thấy cần thiết."
 
 #: builtin/remote.c:683
 #, c-format
@@ -4429,7 +4457,7 @@ msgstr "chưa chỉ ra máy chủ nào"
 
 #: builtin/remote.c:1447
 msgid "--add --delete doesn't make sense"
-msgstr "--add --delete không phân biệt HOA/thường"
+msgstr "--add --delete không hợp lý"
 
 #: builtin/remote.c:1487
 #, c-format
@@ -4767,7 +4795,7 @@ msgstr "Thêm nội dung tập tin vào bảng mục lục"
 
 #: common-cmds.h:9
 msgid "Find by binary search the change that introduced a bug"
-msgstr ""
+msgstr "Tìm kiếm bằng điều tra nhị phân các thay đổi mà nó bắt đầu lỗi"
 
 #: common-cmds.h:10
 msgid "List, create, or delete branches"
@@ -4823,7 +4851,7 @@ msgstr "Cập nhật tham chiếu (refs) máy chủ cùng với các đối tư�
 
 #: common-cmds.h:23
 msgid "Forward-port local commits to the updated upstream head"
-msgstr ""
+msgstr "Forward-port những lần chuyển giao nội bộ tới head dòng ngược đã cập nhật"
 
 #: common-cmds.h:24
 msgid "Reset current HEAD to the specified state"
