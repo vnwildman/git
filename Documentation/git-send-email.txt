@@ -131,6 +131,9 @@ Note that no attempts whatsoever are made to validate the encoding.
 	Specify encoding of compose message. Default is the value of the
 	'sendemail.composeencoding'; if that is unspecified, UTF-8 is assumed.
 
+--xmailer::
+	Prevent adding the "X-Mailer:" header.  Default value is
+	'sendemail.xmailer'.
 
 Sending
 ~~~~~~~

@@ -54,6 +54,7 @@ git send-email [options] <file | directory | rev-list options >
     --[no-]bcc              <str>  * Email Bcc:
     --subject               <str>  * Email "Subject:"
     --in-reply-to           <str>  * Email "In-Reply-To:"
+    --[no-]xmailer                 * Don't add "X-Mailer:" header.  Default on.
     --[no-]annotate                * Review each patch that will be sent in an editor.
     --compose                      * Open an editor for introduction.
     --compose-encoding      <str>  * Encoding to assume for introduction.
@@ -176,6 +177,9 @@ my $force = 0;
 my $multiedit;
 my $editor;
 
+# Usage of X-Mailer email header
+my $xmailer;
+
 sub do_edit {
 	if (!defined($editor)) {
 		$editor = Git::command_oneline('var', 'GIT_EDITOR');
@@ -219,7 +223,8 @@ my %config_bool_settings = (
     "signedoffcc" => [\$signed_off_by_cc, undef],      # Deprecated
     "validate" => [\$validate, 1],
     "multiedit" => [\$multiedit, undef],
-    "annotate" => [\$annotate, undef]
+    "annotate" => [\$annotate, undef],
+    "xmailer" => [\$xmailer, 1]
 );
 
 my %config_settings = (
@@ -318,6 +323,7 @@ my $rc = GetOptions("h" => \$help,
 		    "8bit-encoding=s" => \$auto_8bit_encoding,
 		    "compose-encoding=s" => \$compose_encoding,
 		    "force" => \$force,
+		    "xmailer!" => \$xmailer,
 	 );
 
 usage() if $help;
@@ -1163,8 +1169,10 @@ To: $to${ccline}
 Subject: $subject
 Date: $date
 Message-Id: $message_id
-X-Mailer: git-send-email $gitversion
 ";
+	if ($xmailer) {
+		$header .= "X-Mailer: git-send-email $gitversion\n";
+	}
 	if ($reply_to) {
 
 		$header .= "In-Reply-To: $reply_to\n";
