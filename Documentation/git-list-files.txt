@@ -53,8 +53,8 @@ OPTIONS
 
 -F::
 --classify::
-	Append indicator (one of `*/=>@|`, which is executable,
-	directory, socket, Solaris door, symlink, or fifo
+	Append indicator (one of `*/=>@|&`, which is executable,
+	directory, socket, Solaris door, symlink, fifo, or submodule
 	respectively) to entries.
 
 -R::
