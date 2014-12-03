@@ -54,7 +54,7 @@ git send-email [options] <file | directory | rev-list options >
     --[no-]bcc              <str>  * Email Bcc:
     --subject               <str>  * Email "Subject:"
     --in-reply-to           <str>  * Email "In-Reply-To:"
-    --[no-]xmailer                 * Don't add "X-Mailer:" header.  Default on.
+    --[no-]xmailer                 * Add "X-Mailer:" header (default).
     --[no-]annotate                * Review each patch that will be sent in an editor.
     --compose                      * Open an editor for introduction.
     --compose-encoding      <str>  * Encoding to assume for introduction.
@@ -149,7 +149,7 @@ my $auth;
 # Variables we fill in automatically, or via prompting:
 my (@to,$no_to,@initial_to,@cc,$no_cc,@initial_cc,@bcclist,$no_bcc,@xh,
 	$initial_reply_to,$initial_subject,@files,
-	$author,$sender,$smtp_authpass,$annotate,$compose,$time);
+	$author,$sender,$smtp_authpass,$annotate,$use_xmailer,$compose,$time);
 
 my $envelope_sender;
 
@@ -176,9 +176,6 @@ my $force = 0;
 # Handle interactive edition of files.
 my $multiedit;
 my $editor;
-
-# Usage of X-Mailer email header
-my $xmailer;
 
 sub do_edit {
 	if (!defined($editor)) {
@@ -224,7 +221,7 @@ my %config_bool_settings = (
     "validate" => [\$validate, 1],
     "multiedit" => [\$multiedit, undef],
     "annotate" => [\$annotate, undef],
-    "xmailer" => [\$xmailer, 1]
+    "xmailer" => [\$use_xmailer, 1]
 );
 
 my %config_settings = (
@@ -323,7 +320,7 @@ my $rc = GetOptions("h" => \$help,
 		    "8bit-encoding=s" => \$auto_8bit_encoding,
 		    "compose-encoding=s" => \$compose_encoding,
 		    "force" => \$force,
-		    "xmailer!" => \$xmailer,
+		    "xmailer!" => \$use_xmailer,
 	 );
 
 usage() if $help;
@@ -1170,7 +1167,7 @@ Subject: $subject
 Date: $date
 Message-Id: $message_id
 ";
-	if ($xmailer) {
+	if ($use_xmailer) {
 		$header .= "X-Mailer: git-send-email $gitversion\n";
 	}
 	if ($reply_to) {
