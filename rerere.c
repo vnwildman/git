@@ -484,8 +484,8 @@ static void update_paths(struct string_list *update)
 
 	for (i = 0; i < update->nr; i++) {
 		struct string_list_item *item = &update->items[i];
-		if (add_file_to_cache(item->string, ADD_CACHE_IGNORE_ERRORS))
-			die("staging updated %s failed", item->string);
+		if (add_file_to_cache(item->string, 0))
+			exit(128);
 	}
 
 	if (active_cache_changed) {
