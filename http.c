@@ -515,8 +515,11 @@ void http_cleanup(void)
 	}
 	ssl_cert_password_required = 0;
 
-	if (cached_accept_language)
+	if (cached_accept_language) {
 		strbuf_release(cached_accept_language);
+		free(cached_accept_language);
+		cached_accept_language = NULL;
+	}
 }
 
 struct active_request_slot *get_active_slot(void)
@@ -1063,13 +1066,10 @@ static struct strbuf *get_accept_language(void)
 	if (MAX_LANGS < num_langs)
 		num_langs = MAX_LANGS;
 
-	for (max_q = 1, decimal_places = 0;
-		max_q < num_langs;
-		decimal_places++, max_q *= 10);
+	for (max_q = 1, decimal_places = 0; max_q < num_langs; max_q *= 10)
+		decimal_places++;
 
 	sprintf(q_format, ";q=0.%%0%dd", decimal_places);
-
-	q = max_q;
 
 	strbuf_addstr(cached_accept_language, "Accept-Language: ");
 
@@ -1082,7 +1082,7 @@ static struct strbuf *get_accept_language(void)
 	 * [2]: http://www.gnu.org/software/libc/manual/html_node/Using-gettextized-software.html
 	 * [3]: http://tools.ietf.org/html/rfc7231#section-5.3.5
 	 */
-	for (pos = lang_begin; ; pos++) {
+	for (pos = lang_begin, q = max_q; ; pos++) {
 		if (*pos == ':' || !*pos) {
 			/* Ignore if this character is the first one. */
 			if (pos == lang_begin)

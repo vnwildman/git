@@ -197,14 +197,15 @@ test_expect_success 'reencoding is robust to whitespace oddities' '
 '
 
 check_language () {
-	echo "Accept-Language: $1\r" >expect &&
-	test_must_fail env \
-		GIT_CURL_VERBOSE=1 \
-		LANGUAGE=$2 \
-		LC_ALL=$3 \
-		LC_MESSAGES=$4 \
-		LANG=$5 \
-		git clone "$HTTPD_URL/accept/language" 2>stderr &&
+	echo "Accept-Language: $1" >expect &&
+	GIT_CURL_VERBOSE=1 \
+	LANGUAGE=$2 \
+	LC_ALL=$3 \
+	LC_MESSAGES=$4 \
+	LANG=$5 \
+	git ls-remote "$HTTPD_URL/dumb/repo.git" 2>&1 |
+	tr -d '\015' |
+	sort -u >stderr &&
 	grep -i ^Accept-Language: stderr >actual &&
 	test_cmp expect actual
 }
@@ -222,8 +223,8 @@ ja;q=0.95, zh;q=0.94, sv;q=0.93, pt;q=0.92, nb;q=0.91, *;q=0.01" \
 		ko_KR.EUC-KR:en_US.UTF-8:fr_CA:de.UTF-8@euro:sr@latin:ja:zh:sv:pt:nb
 '
 
-test_expect_success 'git client does not send Accept-Language' '
-	test_must_fail env GIT_CURL_VERBOSE=1 LANGUAGE= git clone "$HTTPD_URL/accept/language" 2>stderr &&
+test_expect_success 'git client does not send an empty Accept-Language' '
+	GIT_CURL_VERBOSE=1 LANGUAGE= git ls-remote "$HTTPD_URL/dumb/repo.git" 2>stderr &&
 	! grep "^Accept-Language:" stderr
 '
 
